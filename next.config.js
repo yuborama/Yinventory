@@ -1,9 +1,8 @@
 // next.config.js
 const withSass = require('@zeit/next-sass')
 const withFonts = require('next-fonts');
-module.exports = withFonts()
 
-module.exports = withSass({
+module.exports = withFonts(withSass({
     
   devIndicators: {
     autoPrerender: false,
@@ -11,4 +10,4 @@ module.exports = withSass({
   env:{
 
 }
-})
+}))
